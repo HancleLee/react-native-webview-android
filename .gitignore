@@ -11,4 +11,16 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+.gitignore
+.gitignore.swp
+.idea/
+android/.gradle/
+android/.idea/
+android/android.iml
+android/build/
+android/gradle/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+
 .DS_Store
