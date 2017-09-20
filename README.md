@@ -1,3 +1,6 @@
+forked from lucasferreira/react-native-webview-android (https://github.com/lucasferreira/react-native-webview-android)
+
+
 # react-native-webview-android
 Simple React Native Android module to use Android's WebView inside your app (with experimental html file input support to handle file uploads in forms).
 
@@ -8,7 +11,7 @@ Simple React Native Android module to use Android's WebView inside your app (wit
 ### Installation
 
 ```bash
-npm install react-native-webview-android --save
+npm install react-native-webview-android-hancle --save
 ```
 
 ### Add it to your android project
@@ -18,7 +21,7 @@ npm install react-native-webview-android --save
 ```gradle
 ...
 include ':RNWebView', ':app'
-project(':RNWebView').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview-android/android')
+project(':RNWebView').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-webview-android-hancle/android')
 ```
 
 * In `android/app/build.gradle`
