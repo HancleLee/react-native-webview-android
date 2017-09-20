@@ -4,9 +4,9 @@
 'use strict';
 
 try {
-  var React = require('react');
+    var React = require('react');
 } catch(ex) {
-  var React = require('react-native');
+    var React = require('react-native');
 }
 
 var RN = require("react-native");
@@ -32,8 +32,17 @@ var WebViewAndroid = React.createClass({
     allowUrlRedirect: React.PropTypes.bool,
     builtInZoomControls: React.PropTypes.bool,
     onNavigationStateChange: React.PropTypes.func,
+<<<<<<< HEAD
     jsToApp: React.PropTypes.func
+=======
+    jsToApp: React.PropTypes.func,
+>>>>>>> develop
   },
+    _jsToApp: function(event) {
+        if (this.props.jsToApp) {
+            this.props.jsToApp(event.nativeEvent);
+        }
+    },
   _onNavigationStateChange: function(event) {
     if (this.props.onNavigationStateChange) {
       this.props.onNavigationStateChange(event.nativeEvent);
@@ -66,7 +75,11 @@ var WebViewAndroid = React.createClass({
     );
   },
   render: function() {
+<<<<<<< HEAD
       return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} jsToApp={ this._jsToApp }/>;
+=======
+    return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} jsToApp={this._jsToApp}/>;
+>>>>>>> develop
   },
   _getWebViewHandle: function() {
     return RN.findNodeHandle(this.refs[WEBVIEW_REF]);

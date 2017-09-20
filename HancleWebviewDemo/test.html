@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:height="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Carson</title>
+    <script>
+
+
+        function jsToApp(){
+            // 由于对象映射，所以调用test对象等于调用Android映射的对象
+            try {
+                window.app.jsToApp("hello, app!!!");
+
+            }catch (e) {
+                console.log(e.message);
+            }
+        }
+    </script>
+</head>
+<body>
+<button type="button" id="button1" onclick="jsToApp()" >try to click me </button>
+</body>
+</html>
