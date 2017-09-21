@@ -27,6 +27,13 @@ allprojects {
     }
 }
 
+allprojects {
+    repositories {
+        maven { url "$rootDir/node_modules/react-native/android" } // All of React Native (JS, Android binaries) is installed from npm
+        jcenter()
+    }
+}
+
 dependencies {
     compile 'com.facebook.react:react-native:+'
 }

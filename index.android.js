@@ -32,11 +32,7 @@ var WebViewAndroid = React.createClass({
     allowUrlRedirect: React.PropTypes.bool,
     builtInZoomControls: React.PropTypes.bool,
     onNavigationStateChange: React.PropTypes.func,
-<<<<<<< HEAD
-    jsToApp: React.PropTypes.func
-=======
     jsToApp: React.PropTypes.func,
->>>>>>> develop
   },
     _jsToApp: function(event) {
         if (this.props.jsToApp) {
@@ -75,11 +71,8 @@ var WebViewAndroid = React.createClass({
     );
   },
   render: function() {
-<<<<<<< HEAD
       return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} jsToApp={ this._jsToApp }/>;
-=======
-    return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} jsToApp={this._jsToApp}/>;
->>>>>>> develop
+      // return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} />;
   },
   _getWebViewHandle: function() {
     return RN.findNodeHandle(this.refs[WEBVIEW_REF]);
