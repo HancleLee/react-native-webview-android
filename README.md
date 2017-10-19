@@ -115,7 +115,10 @@ var WebViewAndroidExample = React.createClass({
           builtInZoomControls={false}
           onNavigationStateChange={this.onNavigationStateChange}
           url={SITE_URL} // or use the source(object) attribute...
-          style={styles.containerWebView} />
+          style={styles.containerWebView}
+          jsToApp={this._jsToApp.bind(this)}  // js call app: try { window.app.jsToApp("hello,app!!!");} catch(e) {}
+        }
+          />
       );
 
       // other attributes: source(object), html(string), htmlCharset(string), baseUrl(string), injectedJavaScript(string), disableCookies(bool), disablePlugins(bool), userAgent(string)
