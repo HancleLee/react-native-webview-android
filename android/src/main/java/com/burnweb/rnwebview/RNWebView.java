@@ -109,7 +109,7 @@ class RNWebView extends WebView implements LifecycleEventListener {
         this.setWebChromeClient(getCustomClient());
 
         // insert obj to js
-        this.addJavascriptInterface(RNWebView.this, "app");
+        this.addJavascriptInterface(RNWebView.this, "RNWebViewBridge");
     }
 
     public void setCharset(String charset) {

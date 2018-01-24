@@ -6,17 +6,15 @@ import com.facebook.react.uimanager.events.Event;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
 
 
- * Created by qicheng on 2017/9/12.
- */
 
 public class JsToAppEvent extends Event<com.burnweb.rnwebview.JsToAppEvent> {
 
-    public static final String JS_EVENT_NAME = "jsToApp";
+    public static final String JS_EVENT_NAME = "onMessage";
 
     private final String mTitle;
 
     public JsToAppEvent(int viewId, String title) {
-        super(viewId);
+//        super(viewId);
 
         mTitle = title;
     }

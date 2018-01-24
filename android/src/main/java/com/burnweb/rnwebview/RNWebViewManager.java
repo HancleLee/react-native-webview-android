@@ -1,23 +1,22 @@
 package com.burnweb.rnwebview;
 
-import javax.annotation.Nullable;
+import android.view.ViewGroup.LayoutParams;
+import android.webkit.CookieManager;
+import android.webkit.WebSettings;
+
+import com.facebook.react.bridge.ReadableArray;
+import com.facebook.react.bridge.ReadableMap;
+import com.facebook.react.bridge.ReadableMapKeySetIterator;
+import com.facebook.react.common.MapBuilder;
+import com.facebook.react.common.annotations.VisibleForTesting;
+import com.facebook.react.uimanager.SimpleViewManager;
+import com.facebook.react.uimanager.ThemedReactContext;
+import com.facebook.react.uimanager.annotations.ReactProp;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import android.view.ViewGroup.LayoutParams;
-import android.webkit.WebSettings;
-import android.webkit.CookieManager;
-
-import com.facebook.react.bridge.ReadableMap;
-import com.facebook.react.bridge.ReadableMapKeySetIterator;
-
-import com.facebook.react.bridge.ReadableArray;
-import com.facebook.react.common.MapBuilder;
-import com.facebook.react.uimanager.SimpleViewManager;
-import com.facebook.react.uimanager.ThemedReactContext;
-import com.facebook.react.uimanager.annotations.ReactProp;
-import com.facebook.react.common.annotations.VisibleForTesting;
+import javax.annotation.Nullable;
 
 public class RNWebViewManager extends SimpleViewManager<RNWebView> {
 
@@ -45,12 +44,7 @@ public class RNWebViewManager extends SimpleViewManager<RNWebView> {
         // Fixes broken full-screen modals/galleries due to body
         // height being 0.
         rnwv.setLayoutParams(
-<<<<<<< HEAD
-                new LayoutParams(LayoutParams.MATCH_PARENT,
-                        LayoutParams.MATCH_PARENT));
-=======
-                new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
->>>>>>> develop
+         new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         CookieManager.getInstance().setAcceptCookie(true); // add default cookie support
         CookieManager.getInstance().setAcceptFileSchemeCookies(true); // add default cookie support
 
